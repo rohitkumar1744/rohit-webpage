@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Library Management System</title>
+
+    <link rel="stylesheet" href="rohit.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">📚 Library Management</div>
+
+        <nav>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#books">Books</a>
+            <a href="#addBook">Add Book</a>
+        </nav>
+    </header>
+
+
+    <!-- Main Container -->
+    <main>
+
+        <!-- Dashboard -->
+        <section id="dashboard" class="dashboard">
+
+            <div class="welcome">
+                <h1>Library Management System</h1>
+                <p>Manage your library books easily and efficiently.</p>
+            </div>
+
+            <div class="stats">
+
+                <div class="card">
+                    <h3>Total Books</h3>
+                    <p id="totalBooks">0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Available Books</h3>
+                    <p id="availableBooks">0</p>
+                </div>
+
+                <div class="card">
+                    <h3>Issued Books</h3>
+                    <p id="issuedBooks">0</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Add Book -->
+        <section id="addBook" class="form-section">
+
+            <h2>Add New Book</h2>
+
+            <form id="bookForm">
+
+                <input
+                    type="text"
+                    id="bookTitle"
+                    placeholder="Enter Book Title"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="bookAuthor"
+                    placeholder="Enter Author Name"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="bookCategory"
+                    placeholder="Enter Category"
+                    required
+                >
+
+                <input
+                    type="number"
+                    id="bookYear"
+                    placeholder="Publication Year"
+                    required
+                >
+
+                <button type="submit">Add Book</button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Books Section -->
+        <section id="books" class="books-section">
+
+            <div class="section-header">
+
+                <h2>Library Books</h2>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="🔍 Search book..."
+                >
+
+            </div>
+
+
+            <!-- Books Table -->
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Book Title</th>
+                            <th>Author</th>
+                            <th>Category</th>
+                            <th>Year</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="bookTableBody">
+                        <!-- JavaScript will add books here -->
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Library Management System | Designed using HTML, CSS & JavaScript</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
