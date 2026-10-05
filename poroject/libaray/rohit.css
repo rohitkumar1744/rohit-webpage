@@ -1,0 +1,364 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #222;
+}
+
+
+/* Header */
+
+header {
+    background: #172554;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 7%;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #93c5fd;
+}
+
+
+/* Main */
+
+main {
+    width: 86%;
+    margin: auto;
+}
+
+
+/* Dashboard */
+
+.dashboard {
+    padding: 45px 0 30px;
+}
+
+.welcome h1 {
+    font-size: 34px;
+    color: #172554;
+    margin-bottom: 8px;
+}
+
+.welcome p {
+    color: #64748b;
+}
+
+
+/* Statistics */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+    border-left: 5px solid #2563eb;
+}
+
+.card h3 {
+    color: #64748b;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 32px;
+    font-weight: bold;
+    color: #172554;
+}
+
+
+/* Add Book Form */
+
+.form-section {
+    background: white;
+
+    padding: 30px;
+
+    margin: 20px 0;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.form-section h2 {
+    margin-bottom: 20px;
+    color: #172554;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+form input {
+    padding: 13px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 7px;
+
+    outline: none;
+
+    font-size: 14px;
+}
+
+form input:focus {
+    border-color: #2563eb;
+}
+
+form button {
+    grid-column: span 4;
+
+    padding: 13px;
+
+    background: #2563eb;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    font-weight: bold;
+}
+
+form button:hover {
+    background: #1d4ed8;
+}
+
+
+/* Books */
+
+.books-section {
+    background: white;
+
+    padding: 30px;
+
+    margin: 20px 0 40px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.section-header h2 {
+    color: #172554;
+}
+
+#searchInput {
+    width: 260px;
+
+    padding: 12px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 7px;
+
+    outline: none;
+}
+
+
+/* Table */
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+thead {
+    background: #172554;
+    color: white;
+}
+
+th,
+td {
+    padding: 14px;
+
+    text-align: left;
+
+    border-bottom: 1px solid #e2e8f0;
+}
+
+tbody tr:hover {
+    background: #f8fafc;
+}
+
+
+/* Status */
+
+.status {
+    padding: 6px 10px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+.available {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.issued {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+
+/* Buttons */
+
+.action-btn {
+    border: none;
+
+    padding: 7px 10px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    margin-right: 4px;
+}
+
+.issue-btn {
+    background: #2563eb;
+    color: white;
+}
+
+.return-btn {
+    background: #16a34a;
+    color: white;
+}
+
+.delete-btn {
+    background: #dc2626;
+    color: white;
+}
+
+.action-btn:hover {
+    opacity: 0.8;
+}
+
+
+/* Footer */
+
+footer {
+    background: #172554;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin-top: 30px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 900px) {
+
+    form {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    form button {
+        grid-column: span 2;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    main {
+        width: 94%;
+    }
+
+    nav a {
+        margin: 5px;
+        font-size: 13px;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+    }
+
+    form button {
+        grid-column: span 1;
+    }
+
+    .section-header {
+        flex-direction: column;
+        gap: 15px;
+        align-items: stretch;
+    }
+
+    #searchInput {
+        width: 100%;
+    }
+
+}
