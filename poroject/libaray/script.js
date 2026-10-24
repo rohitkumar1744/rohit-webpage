@@ -1,4 +1,4 @@
-// Add default library books 
+// Add default library books  
 
 let books = JSON.parse(localStorage.getItem("libraryBooks")) || [
 
